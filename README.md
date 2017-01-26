@@ -79,7 +79,7 @@ print(total)
 Add a dependency to Package.swift:
 
 ``` swift
-.Package(url: "https://github.com/PerfectSideRepos/Perfect-CArray.git", majorVersion:1)
+.Package(url: "https://github.com/PerfectSideRepos/Perfect-CArrayHelper.git", majorVersion:1)
 ```
 
 ### Header Declaration

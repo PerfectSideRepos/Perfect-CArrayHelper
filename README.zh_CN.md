@@ -83,7 +83,7 @@ print(total)
 请在您的 Package.swift 文件中增加如下依存关系:
 
 ``` swift
-.Package(url: "https://github.com/PerfectSideRepos/Perfect-CArray.git", majorVersion:1)
+.Package(url: "https://github.com/PerfectSideRepos/Perfect-CArrayHelper.git", majorVersion:1)
 ```
 
 ### 导入函数库
