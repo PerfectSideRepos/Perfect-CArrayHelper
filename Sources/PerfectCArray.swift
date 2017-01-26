@@ -24,6 +24,10 @@ public class CArray<T> {
   /// auto release pool, with [T?] as element and the base address of [T?] as its key
   internal var pool: [UnsafeMutablePointer<T?>: Any] = [:]
 
+  /// constructor
+  public init() {
+  }//end public 
+
   /// not sure if necessary, but release them for safe
   deinit {
     for (_ , v) in pool {
