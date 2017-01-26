@@ -34,6 +34,7 @@ public class CArray<T> {
       var array = v as? [T?] ?? []
       array.removeAll()
     }//next
+    pool.removeAll()
   }//deinit
 
   /// append an element to the end of null - terminated array pointer
