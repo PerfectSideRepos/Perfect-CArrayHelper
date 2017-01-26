@@ -63,10 +63,11 @@ var array = UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>(bitPattern: 0)
 let _  = helper.append(pArray: &array, element: strdup("hello"))
 let _  = helper.append(pArray: &array, element: strdup("world!"))
 
-// 针对一个数组指针遍历所有的元素
+// 针对一个数组指针遍历所有的元素，并释放strdup的内存
 helper.forEach(array: array!) { str in
   let s = String(cString: str)
   print(s)
+  free(str)
 }//next
 
 // 用 Swift 数组的方式来使用指针：

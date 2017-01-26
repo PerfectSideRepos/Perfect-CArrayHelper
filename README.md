@@ -59,10 +59,11 @@ var array = UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>(bitPattern: 0)
 let _  = helper.append(pArray: &array, element: strdup("hello"))
 let _  = helper.append(pArray: &array, element: strdup("world!"))
 
-// iterate pointers in the array
+// iterate pointers in the array, and release the strdup
 helper.forEach(array: array!) { str in
   let s = String(cString: str)
   print(s)
+  free(str)
 }//next
 
 // do some more array stuff with this pointer
